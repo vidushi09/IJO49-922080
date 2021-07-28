@@ -3,12 +3,12 @@ version: 0.2
 phases:
   build:
     commands:
-      -echo Entered the build phase...
-      -mvn clean package
-    post_build:
-      commands:
-        -echo Build completed successfully
+      - echo Entered the build phase...
+      - mvn clean package
+  post_build:
+    commands:
+       - echo Build completed successfully
 artifacts:
-  files:
-    -target/aws-deploy-example.jar
-  discard-paths: yes
+   files:
+      - target/aws-deploy-example.jar
+   discard-paths: yes
